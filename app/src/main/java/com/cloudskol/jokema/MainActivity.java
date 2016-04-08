@@ -69,8 +69,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cloudJoke(View view) {
+        new JokeAsyncTask(this).execute();
+    }
+
+    public void onJokeFetched(String joke) {
         final Intent libraryIntent = new Intent(this, LibraryActivity.class);
-        libraryIntent.putExtra(JOKE, "");
+        libraryIntent.putExtra(JOKE, joke);
         startActivity(libraryIntent);
     }
 }
