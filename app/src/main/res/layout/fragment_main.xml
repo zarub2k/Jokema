@@ -19,6 +19,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tell_joke"
-        android:onClick="tellJoke"/>
+        android:text="@string/tell_joke_api"
+        android:onClick="apiJoke"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tell_joke_cloud"
+        android:onClick="cloudJoke"/>
 </LinearLayout>

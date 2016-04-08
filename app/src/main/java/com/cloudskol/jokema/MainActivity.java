@@ -60,15 +60,17 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
+    public void apiJoke(View view) {
         final JokemaAPI jokemaAPI = new JokemaAPI();
         final Joke joke = jokemaAPI.getJoke();
 
         Log.v(LOG_TAG, "Generated Joke: " + joke.getSummary());
+        Toast.makeText(MainActivity.this, joke.getSummary(), Toast.LENGTH_SHORT).show();
+    }
 
+    public void cloudJoke(View view) {
         final Intent libraryIntent = new Intent(this, LibraryActivity.class);
-        libraryIntent.putExtra(JOKE, joke.getSummary());
+        libraryIntent.putExtra(JOKE, "");
         startActivity(libraryIntent);
-//        Toast.makeText(MainActivity.this, joke.getSummary(), Toast.LENGTH_SHORT).show();
     }
 }

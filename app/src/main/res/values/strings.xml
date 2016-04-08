@@ -2,7 +2,8 @@
     <string name="app_name">Jokema</string>
     <string name="action_settings">Settings</string>
     <string name="jokema">Jokema!</string>
-    <string name="tell_joke">Tell Joke!</string>
+    <string name="tell_joke_cloud">Cloud Joke!</string>
+    <string name="tell_joke_api">API Joke!</string>
 
     <string name="title_jokema">Click for new Joke!</string>
 </resources>
