@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.cloudskol.jokema.api.JokemaAPI;
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final JokemaAPI jokemaAPI = new JokemaAPI();
-        jokemaAPI.sayJoke();
+        jokemaAPI.getJoke();
     }
 
     @Override
@@ -53,5 +54,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void tellJoke(View view) {
+        Toast.makeText(MainActivity.this, "Called", Toast.LENGTH_SHORT).show();
     }
 }
