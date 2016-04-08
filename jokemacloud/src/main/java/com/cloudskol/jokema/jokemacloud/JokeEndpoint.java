@@ -6,6 +6,8 @@
 
 package com.cloudskol.jokema.jokemacloud;
 
+import com.cloudskol.jokema.api.Joke;
+import com.cloudskol.jokema.api.JokeFactory;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
@@ -22,7 +24,7 @@ import javax.inject.Named;
     packagePath=""
   )
 )
-public class MyEndpoint {
+public class JokeEndpoint {
 
     /** A simple endpoint method that takes a name and says Hi back */
     @ApiMethod(name = "sayHi")
@@ -33,4 +35,8 @@ public class MyEndpoint {
         return response;
     }
 
+    @ApiMethod(name = "joke")
+    public Joke getJoke() {
+        return JokeFactory.getInstance().getJoke();
+    }
 }
