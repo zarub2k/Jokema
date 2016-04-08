@@ -1,10 +1,12 @@
 package com.cloudskol.jokema;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,8 +14,12 @@ import android.widget.Toast;
 
 import com.cloudskol.jokema.api.Joke;
 import com.cloudskol.jokema.api.JokemaAPI;
+import com.cloudskol.jokemalib.LibraryActivity;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+
+    private static final String JOKE = "JOKE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
         final JokemaAPI jokemaAPI = new JokemaAPI();
         final Joke joke = jokemaAPI.getJoke();
-        Toast.makeText(MainActivity.this, joke.getSummary(), Toast.LENGTH_SHORT).show();
+
+        Log.v(LOG_TAG, "Generated Joke: " + joke.getSummary());
+
+        final Intent libraryIntent = new Intent(this, LibraryActivity.class);
+        libraryIntent.putExtra(JOKE, joke.getSummary());
+        startActivity(libraryIntent);
+//        Toast.makeText(MainActivity.this, joke.getSummary(), Toast.LENGTH_SHORT).show();
     }
 }
