@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JokemaLib</string>
     <string name="joke_warning">No joke available today :(</string>
+    <string name="joke_title">Joke of the day!</string>
 </resources>
