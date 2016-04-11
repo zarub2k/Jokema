@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.cloudskol.jokema.api.Joke;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
     private static final String JOKE = "JOKE";
+
+    private ProgressBar spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        spinner = (ProgressBar) findViewById(R.id.spinner);
+        hideSpinner();
     }
 
     @Override
@@ -69,12 +75,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cloudJoke(View view) {
+        showSpinner();
         new JokeAsyncTask(this).execute();
     }
 
     public void onJokeFetched(String joke) {
+        hideSpinner();
+
         final Intent libraryIntent = new Intent(this, LibraryActivity.class);
         libraryIntent.putExtra(JOKE, joke);
         startActivity(libraryIntent);
+    }
+
+    private void showSpinner() {
+        spinner.setVisibility(View.VISIBLE);
+    }
+
+    private void hideSpinner() {
+        spinner.setVisibility(View.GONE);
     }
 }

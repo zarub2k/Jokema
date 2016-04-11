@@ -27,4 +27,12 @@
         android:layout_height="wrap_content"
         android:text="@string/tell_joke_cloud"
         android:onClick="cloudJoke"/>
+
+    <ProgressBar
+        android:id="@+id/spinner"
+        android:progressDrawable="@drawable/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/progressBarStyleLarge"/>
 </LinearLayout>
