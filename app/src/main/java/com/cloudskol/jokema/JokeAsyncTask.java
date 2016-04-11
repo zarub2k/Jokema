@@ -13,6 +13,8 @@ import java.io.IOException;
 
 /**
  * @author tham
+ *
+ * Async task to fetch jokes from Google Cloud Platform
  */
 public class JokeAsyncTask extends AsyncTask<Void, Void, String> {
     private static MyApi jokeApiCloud = null;
