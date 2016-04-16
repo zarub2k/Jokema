@@ -1,9 +1,6 @@
 package com.cloudskol.jokema;
 
-import android.app.Activity;
-import android.os.AsyncTask;
 import android.test.AndroidTestCase;
-import android.test.mock.MockContext;
 
 import java.util.concurrent.ExecutionException;
 
