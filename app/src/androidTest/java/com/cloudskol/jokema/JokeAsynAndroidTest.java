@@ -6,6 +6,8 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * @author tham
+ *
+ * Functional test class for our application
  */
 public class JokeAsynAndroidTest extends AndroidTestCase {
     public void testAsync() {
