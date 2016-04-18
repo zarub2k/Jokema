@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.cloudskol.jokema.api.Joke;
 import com.cloudskol.jokema.api.JokemaAPI;
 import com.cloudskol.jokemalib.LibraryActivity;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         spinner = (ProgressBar) findViewById(R.id.spinner);
         hideSpinner();
+
+        showAds();
+    }
+
+    private void showAds() {
+        AdView adView = (AdView) findViewById(R.id.adView);
+        final AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @Override

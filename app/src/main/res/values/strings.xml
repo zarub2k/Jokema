@@ -6,4 +6,6 @@
     <string name="tell_joke_api">API Joke!</string>
 
     <string name="title_jokema">Click for new Joke!</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
