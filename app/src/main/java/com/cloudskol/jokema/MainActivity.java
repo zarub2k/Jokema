@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         showAds();
     }
 
+    /**
+     * Method to show ads
+     */
     private void showAds() {
         AdView adView = (AdView) findViewById(R.id.adView);
         final AdRequest adRequest = new AdRequest.Builder().build();
