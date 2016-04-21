@@ -19,6 +19,9 @@ import com.cloudskol.jokemalib.LibraryActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+/**
+ * Main entry point for our application
+ */
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
