@@ -90,11 +90,19 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this, joke.getSummary(), Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Method to fetch joke data from the cloud instance
+     * @param view
+     */
     public void cloudJoke(View view) {
         showSpinner();
         new JokeAsyncTask(this).execute();
     }
 
+    /**
+     * Call back method to handle joke rendering after the server call
+     * @param joke
+     */
     public void onJokeFetched(String joke) {
         hideSpinner();
 
