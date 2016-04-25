@@ -115,10 +115,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(libraryIntent);
     }
 
+    /**
+     * Utility method to show the spinner widget
+     */
     private void showSpinner() {
         spinner.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * Utility method to hide the spinner widget
+     */
     private void hideSpinner() {
         spinner.setVisibility(View.GONE);
     }
