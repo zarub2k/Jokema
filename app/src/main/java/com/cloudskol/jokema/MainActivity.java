@@ -82,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Sample method to generate joke internally and render in the UI
+     * @param view
+     */
     public void apiJoke(View view) {
         final JokemaAPI jokemaAPI = new JokemaAPI();
         final Joke joke = jokemaAPI.getJoke();
