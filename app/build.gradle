@@ -48,7 +48,14 @@ dependencies {
 
     freeCompile 'com.google.android.gms:play-services-ads:8.4.0'
 
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
     compile project(path: ':jokemacloud', configuration: 'android-endpoints')
+
+    androidTestCompile 'com.android.support.test:runner:0.4'
+    androidTestCompile 'com.android.support.test:rules:0.4'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+
+    androidTestCompile 'com.android.support:support-annotations:23.2.1'
+    compile 'com.google.code.findbugs:jsr305:2.0.1'
 }

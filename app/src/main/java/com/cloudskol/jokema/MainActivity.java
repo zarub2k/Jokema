@@ -27,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String JOKE = "JOKE";
 
+    public String result;
+
     private ProgressBar spinner;
+    private boolean asyncTesting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
     public void onJokeFetched(String joke) {
         hideSpinner();
 
+        result = joke;
+
         final Intent libraryIntent = new Intent(this, LibraryActivity.class);
         libraryIntent.putExtra(JOKE, joke);
         startActivity(libraryIntent);
@@ -127,5 +132,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private void hideSpinner() {
         spinner.setVisibility(View.GONE);
+    }
+
+    public void setAsyncTesting(boolean asyncTesting) {
+        this.asyncTesting = asyncTesting;
     }
 }

@@ -1,8 +1,15 @@
 package com.cloudskol.jokema;
 
+import android.support.test.InstrumentationRegistry;
 import android.test.ActivityInstrumentationTestCase2;
 
-import java.util.concurrent.ExecutionException;
+import org.junit.Before;
+import org.junit.Test;
+
+
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
  * @author tham
@@ -24,17 +31,20 @@ public class JokeAsynAndroidTest extends ActivityInstrumentationTestCase2<MainAc
 
     @Test
     public void testAsync() {
-        final JokeAsyncTask jokeAsyncTask = new JokeAsyncTask(activity_);
-
-        try {
-            String result = jokeAsyncTask.execute().get();
-            assertNotNull(result);
-
-            System.out.println("Result: " + result);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
+        activity_.setAsyncTesting(true);
+        onView(withId(R.id.cloudJokeBtn)).perform(click());
+        assertNotNull(activity_.);
+//        final JokeAsyncTask jokeAsyncTask = new JokeAsyncTask(activity_);
+//
+//        try {
+//            String result = jokeAsyncTask.execute().get();
+//            assertNotNull(result);
+//
+//            System.out.println("Result: " + result);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        } catch (ExecutionException e) {
+//            e.printStackTrace();
+//        }
     }
 }
