@@ -33,18 +33,6 @@ public class JokeAsynAndroidTest extends ActivityInstrumentationTestCase2<MainAc
     public void testAsync() {
         activity_.setAsyncTesting(true);
         onView(withId(R.id.cloudJokeBtn)).perform(click());
-        assertNotNull(activity_.);
-//        final JokeAsyncTask jokeAsyncTask = new JokeAsyncTask(activity_);
-//
-//        try {
-//            String result = jokeAsyncTask.execute().get();
-//            assertNotNull(result);
-//
-//            System.out.println("Result: " + result);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        }
+        assertNotNull(activity_.result);
     }
 }

@@ -113,11 +113,14 @@ public class MainActivity extends AppCompatActivity {
     public void onJokeFetched(String joke) {
         hideSpinner();
 
-        result = joke;
-
-        final Intent libraryIntent = new Intent(this, LibraryActivity.class);
-        libraryIntent.putExtra(JOKE, joke);
-        startActivity(libraryIntent);
+        //Trigger new activity if this is not part of async testing
+        if (!asyncTesting) {
+            final Intent libraryIntent = new Intent(this, LibraryActivity.class);
+            libraryIntent.putExtra(JOKE, joke);
+            startActivity(libraryIntent);
+        } else {
+            result = joke;
+        }
     }
 
     /**
