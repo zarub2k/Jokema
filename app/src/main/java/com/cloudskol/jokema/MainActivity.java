@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public String result;
 
     private ProgressBar spinner;
-    private boolean asyncTesting;
+    private boolean asyncTesting = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
