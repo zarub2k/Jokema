@@ -28,12 +28,6 @@ android {
         }
     }
 
-    sourceSets {
-        main {java.srcDirs = ['src/main/java']}
-        free {java.srcDirs = ['src/free/java']}
-        paid {java.srcDirs = ['src/paid/java']}
-    }
-
     productFlavors {
         free {
             applicationId "com.cloudskol.jokema.free";
@@ -42,6 +36,12 @@ android {
         paid {
             applicationId "com.cloudskol.jokema.paid";
         }
+    }
+
+    sourceSets {
+        main {java.srcDirs = ['src/main/java']}
+        free {java.srcDirs = ['src/free/java']}
+        paid {java.srcDirs = ['src/paid/java']}
     }
 }
 
