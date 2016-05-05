@@ -32,10 +32,15 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar spinner;
     private boolean asyncTesting = false;
 
+    private MainActivityFragment mainFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mainFragment = (MainActivityFragment)getSupportFragmentManager().findFragmentById(R.id.fragment);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -58,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
      * Method to show ads
      */
     private void showAds() {
-        AdView adView = (AdView) findViewById(R.id.adView);
-        final AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        AdView adView = (AdView) findViewById(R.id.adView);
+//        final AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
     }
 
     @Override
