@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 /**
  * @author tham
+ * Main fragment for free version
  */
 public class MainActivityFragment extends Fragment {
     private static final String LOG_TAG = MainActivityFragment.class.getSimpleName();
