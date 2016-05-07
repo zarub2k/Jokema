@@ -2,6 +2,10 @@
 Jokema is a joke telling app where you can get random jokes and laugh a lot
 
 ## Features
-*Jokema application
-*Jokema API library
-*Jokema Android package
+* Free / Paid application
+* Google Cloud Endpoint integration
+* Android Library
+* API as a module
+* Google Interstitial for free app
+* Functional tests
+* Run Google App engine locally
