@@ -7,16 +7,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A placeholder fragment containing a simple view
+ * @author tham
+ * Main fragment for free version
  */
 public class MainActivityFragment extends Fragment {
+    private static final String LOG_TAG = MainActivityFragment.class.getSimpleName();
 
-    public MainActivityFragment() {
+    public MainActivityFragment() {}
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View root = inflater.inflate(R.layout.fragment_main, container, false);
+        return root;
     }
 }

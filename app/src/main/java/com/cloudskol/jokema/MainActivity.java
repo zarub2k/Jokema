@@ -16,8 +16,6 @@ import android.widget.Toast;
 import com.cloudskol.jokema.api.Joke;
 import com.cloudskol.jokema.api.JokemaAPI;
 import com.cloudskol.jokemalib.LibraryActivity;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 /**
  * Main entry point for our application
@@ -107,6 +105,11 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void cloudJoke(View view) {
+        callCloudJoke();
+    }
+
+    public void callCloudJoke() {
+        Log.v(LOG_TAG, "Cloud Joke method called");
         showSpinner();
         new JokeAsyncTask(this).execute();
     }
