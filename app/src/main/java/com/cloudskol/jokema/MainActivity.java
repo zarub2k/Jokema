@@ -53,17 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         spinner = (ProgressBar) findViewById(R.id.spinner);
         hideSpinner();
-
-        showAds();
-    }
-
-    /**
-     * Method to show ads
-     */
-    private void showAds() {
-//        AdView adView = (AdView) findViewById(R.id.adView);
-//        final AdRequest adRequest = new AdRequest.Builder().build();
-//        adView.loadAd(adRequest);
     }
 
     @Override
