@@ -30,6 +30,7 @@ public class MainActivityFragment extends Fragment {
         interstitialAd = new InterstitialAd(getActivity());
         interstitialAd.setAdUnitId(getString(R.string.banner_ad_unit_id));
 
+        //Ads will be shown only to the free version
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
